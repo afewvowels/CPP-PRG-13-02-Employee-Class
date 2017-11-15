@@ -39,10 +39,87 @@
 //  each employee on the screen.
 
 #include <iostream>
+#include <iomanip>
+#include "Employee.hpp"
 
 using namespace std;
 
+Employee createEmployeeSusan();
+Employee createEmployeeMark();
+Employee createEmployeeJoy();
+
 int main()
 {
+    Employee empEmployee1;
+    Employee empEmployee2;
+    Employee empEmployee3;
+    
+    empEmployee1 = createEmployeeSusan();
+    empEmployee2 = createEmployeeMark();
+    empEmployee3 = createEmployeeJoy();
+    
+    cout << left << setw(15) << "Name";
+    cout << left << setw(15) << "ID Number";
+    cout << left << setw(15) << "Department";
+    cout << left << setw(15) << "Position";
+    cout << endl;
+    
+    cout << "-------------------------------";
+    cout << "------------------------------" << endl;
+    
+    cout << left << setw(15) << empEmployee1.getName();
+    cout << left << setw(15) << empEmployee1.getIDNumber();
+    cout << left << setw(15) << empEmployee1.getDepartment();
+    cout << left << setw(15) << empEmployee1.getPosition();
+    cout << endl;
+    
+    cout << left << setw(15) << empEmployee2.getName();
+    cout << left << setw(15) << empEmployee2.getIDNumber();
+    cout << left << setw(15) << empEmployee2.getDepartment();
+    cout << left << setw(15) << empEmployee2.getPosition();
+    cout << endl;
+    
+    cout << left << setw(15) << empEmployee3.getName();
+    cout << left << setw(15) << empEmployee3.getIDNumber();
+    cout << left << setw(15) << empEmployee3.getDepartment();
+    cout << left << setw(15) << empEmployee3.getPosition();
+    cout << endl;
+    
     return 0;
+}
+
+Employee createEmployeeSusan()
+{
+    Employee empEmployee;
+    
+    empEmployee.setName("Susan Meyers");
+    empEmployee.setIDNumber(47899);
+    empEmployee.setDepartment("Accounting");
+    empEmployee.setPosition("Vice President");
+    
+    return empEmployee;
+}
+
+Employee createEmployeeMark()
+{
+    Employee empEmployee;
+    
+    empEmployee.setName("Mark Jones");
+    empEmployee.setIDNumber(39119);
+    empEmployee.setDepartment("IT");
+    empEmployee.setPosition("Programmer");
+    
+    return empEmployee;
+}
+
+Employee createEmployeeJoy()
+{
+    Employee empEmployee;
+    
+    empEmployee.setName("Joy Rogers");
+    empEmployee.setIDNumber(81774);
+    empEmployee.setDepartment("Accounting");
+    empEmployee.setPosition("Engineer");
+    
+    return empEmployee;
 }
