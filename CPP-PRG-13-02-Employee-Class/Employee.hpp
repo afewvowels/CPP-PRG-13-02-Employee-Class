@@ -14,23 +14,23 @@
 
 class Employee
 {
-private:
-    std::string strName;
-    int intIDNumber;
-    std::string strDepartment;
-    std::string strPosition;
-public:
-    Employee(std::string, int, std::string, std::string);
-    Employee(std::string, int);
-    Employee();
-    void setName(std::string);
-    void setIDNumber(int);
-    void setDepartment(std::string);
-    void setPosition(std::string);
-    std::string getName() const;
-    int getIDNumber() const;
-    std::string getDepartment() const;
-    std::string getPosition() const;
+    private:
+        std::string strName;
+        int intIDNumber;
+        std::string strDepartment;
+        std::string strPosition;
+    public:
+        Employee(std::string, int, std::string, std::string);
+        Employee(std::string, int);
+        Employee();
+        void setName(std::string);
+        void setIDNumber(int);
+        void setDepartment(std::string);
+        void setPosition(std::string);
+        std::string getName() const;
+        int getIDNumber() const;
+        std::string getDepartment() const;
+        std::string getPosition() const;
 };
 
 #endif /* Employee_hpp */
